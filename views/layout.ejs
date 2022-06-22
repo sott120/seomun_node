@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>서문시장야시장</title>
+        <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+        crossorigin="anonymous"
+    />
+    <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"
+    ></script>
+        <link rel="stylesheet" href="css/notice_write.css" />
+        <link rel="stylesheet" href="css/reset.css" />
+        <link rel="stylesheet" href="css/common.css" />
+        <link rel="stylesheet" href="css/style.css" />
+        <link rel="stylesheet" href="css/login_join.css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap"
+            rel="stylesheet"
+        />
+    </head>
+
+    <body>
+        <header>
+            <div class="inner">
+                <h1 class="logo"><a href="main"></a></h1>
+                <nav class="dis_none1000">
+                    <ul class="navi">
+                        <li><a href="intro">야시장소개</a></li>
+                        <!--routs의 .get("/sub1",어쩌구랑 맞춰주면 하위경로 이름 변경됨 -->
+                        <li><a href="food">먹거리살거리</a></li>
+                        <li><a href="">서문거리예술문화</a></li>
+                        <li><a href="notice">참여마당</a></li>
+                        <li><a href="">입점신청</a></li>
+                    </ul>
+                </nav>
+                <div class="login dis_none1000">
+                    <a href="login">로그인</a>
+                </div>
+                <div class="ham dis_block1000">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </header>
+        <main><%- body %></main>
+        <footer>
+            <div>
+                <div class="f_list">
+                    <div>
+                        <ul>
+                            <li><a href="">개인정보처리방침</a></li>
+                            <li><a href="">이메일무단수집거부</a></li>
+                        </ul>
+                        <span class="dis_none">FAMILY SITE</span>
+                    </div>
+                </div>
+                <div class="f_cont">
+                    <div class="f_logo">
+                        <h2>
+                            <a href="">
+                                <img src="../img/noimg_big2.png" alt="" />
+                            </a>
+                        </h2>
+                    </div>
+                    <div class="f_txt">
+                        <p>
+                            대구 남구 대명로 215 대구광역시상인회관4층
+                            <br class="dis_block" />
+                            재단법인 대구전통시장진흥재단
+                        </p>
+                        <div class="fm_ico">
+                            <a href="">
+                                <i class="icon_ft_talk"></i>
+                            </a>
+                            <a href="">
+                                <i class="icon_ft_fb"></i>
+                            </a>
+                            <a href="">
+                                <i class="icon_ft_blog"></i>
+                            </a>
+                            <a href="">
+                                <i class="icon_ft_yt"></i>
+                            </a>
+                        </div>
+                        <p>
+                            Seomun Night Market Ⓒ2016 Daegu traditional Market
+                            Support Agency.
+                            <br class="dis_block" />All Rights Reserved
+                        </p>
+                    </div>
+                    <div class="f_ico dis_none">
+                        <a href="">
+                            <i class="icon_ft_talk"></i>
+                        </a>
+                        <a href="">
+                            <i class="icon_ft_fb"></i>
+                        </a>
+                        <a href="">
+                            <i class="icon_ft_blog"></i>
+                        </a>
+                        <a href="">
+                            <i class="icon_ft_yt"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <%- script %>
+    </body>
+</html>
