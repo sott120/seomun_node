@@ -10,7 +10,7 @@ const connection = mysql.createConnection({
 
 //리스트 전체 불러오는 함수
 function getAllMemos(callback) {
-    connection.query('SELECT * FROM notice ORDER BY id DESC', (err, rows, fields) => {
+    connection.query('SELECT * FROM (SELECT *, @rownum:=@rownum+1 AS RNUM FROM notice, (SELECT @rownum :=0 as R)NUM)SUB ORDER BY id DESC;', (err, rows, fields) => {
         if (err) throw err;
         callback(rows);
     });
