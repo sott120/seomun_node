@@ -986,7 +986,6 @@ main {
     top: 53%;
     left: 50%;
     transform: translate(-50%, -50%);
-    overflow-x: scroll;
 }
 
 .gall_img > div {
@@ -995,6 +994,7 @@ main {
     margin: auto;
     padding: 0 30px;
     display: flex;
+    box-sizing: content-box;
     justify-content: space-between;
 }
 
@@ -1444,6 +1444,7 @@ main {
     }
     .gall_img {
         width: 100%;
+        overflow-x: scroll;
     }
     .thum_srch {
         width: 980px;
