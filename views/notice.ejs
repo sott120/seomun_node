@@ -54,22 +54,6 @@
                 </tr>
             </thead>
             <tbody>
-                <% rows.forEach((row, index) => { %>
-                    <tr>
-                        <td class="dis_none">
-                            <span><%= row.RNUM %></span>
-                        </td>
-                        <td class="txt_left">
-                            <a onclick="javascript:location.href ='/notice_view?id=<%=row.id%>'"><%= row.title %></a>
-                        </td>
-                        <td><%= row.name %></td>
-                        <td><%= row.date %></td>
-                        <td class="dis_none">
-                            <%= row.views %>
-                        </td>
-                    </tr>
-
-                <% }) %>
                 <tr>
                     <td class="dis_none">
                         <span class="noti_badge">공지</span>
@@ -125,64 +109,22 @@
                     <td>2022-01-03</td>
                     <td class="dis_none">2004</td>
                 </tr>
-                <tr>
-                    <td class="dis_none">
-                        <span>82</span>
-                    </td>
-                    <td class="txt_left">
-                        <a href="">● 제4회 2021 서문가요제 결승전 개최 ●</a>
-                    </td>
-                    <td>운영자</td>
-                    <td>2022-12-17</td>
-                    <td class="dis_none">363</td>
-                </tr>
-                <tr>
-                    <td class="dis_none">
-                        <span>81</span>
-                    </td>
-                    <td class="txt_left">
-                        <a href=""
-                            >2021 야시장 2차 매대 운영자 모집 품평회 심사 대상자
-                            및 공고</a
-                        >
-                    </td>
-                    <td>운영자</td>
-                    <td>2022-11-02</td>
-                    <td class="dis_none">591</td>
-                </tr>
-                <tr>
-                    <td class="dis_none">
-                        <span>80</span>
-                    </td>
-                    <td class="txt_left">
-                        <a href="">2021년 2차 야시장 매대운영자 모집 연장</a>
-                    </td>
-                    <td>운영자</td>
-                    <td>2022-09-30</td>
-                    <td class="dis_none">712</td>
-                </tr>
-                <tr>
-                    <td class="dis_none">
-                        <span>79</span>
-                    </td>
-                    <td class="txt_left">
-                        <a href="">서문·칠성야시장 매대운영자 모집공고</a>
-                    </td>
-                    <td>운영자</td>
-                    <td>2022-01-25</td>
-                    <td class="dis_none">300</td>
-                </tr>
-                <tr>
-                    <td class="dis_none">
-                        <span>78</span>
-                    </td>
-                    <td class="txt_left">
-                        <a href="">서문야시장 정기휴무일 변경안내</a>
-                    </td>
-                    <td>운영자</td>
-                    <td>2022-08-13</td>
-                    <td class="dis_none">2560</td>
-                </tr>
+                <% rows.forEach((row, index) => { %>
+                    <tr>
+                        <td class="dis_none">
+                            <span><%= row.RNUM %></span>
+                        </td>
+                        <td class="txt_left">
+                            <a onclick="javascript:location.href ='/notice_view?id=<%=row.id%>'"><%= row.title %></a>
+                        </td>
+                        <td><%= row.name %></td>
+                        <td><%= row.date %></td>
+                        <td class="dis_none">
+                            <%= row.views %>
+                        </td>
+                    </tr>
+
+                <% }) %>
             </tbody>
         </table>
     </article>

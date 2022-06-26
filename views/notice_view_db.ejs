@@ -23,17 +23,18 @@
             <span><%= row.date %></span>
         </div>
     </div>
-    <article class="view_body">
-        <%= row.content %>
-    </article>
+    <article class="view_body"><%= row.content %></article>
     <div class="view_file">
         <div>첨부파일</div>
         <ul>
             
         </ul>
     </div>
-
-    <div class="view_btn">
+    <div class="view_btn2">
+    <a onclick="javascript:location.href ='/notice_view?id=<%=row.id-10%>'">이전글</a>
+    <a onclick="javascript:location.href ='/notice_view?id=<%=row.id+10%>'">다음글</a>
+    </div>
+    <div class="view_btn3">
         <a onclick="javascript:location.href ='/notice_update?id=<%=row.id%>'">수정하기</a>
         <a onclick="javascript:location.href ='/notice_delete?id=<%=row.id%>'">삭제하기</a>
         <a href="notice">목록으로</a>
