@@ -909,7 +909,7 @@ main {
     background-image: url(../img/index/arrow04_r.png);
     background-size: 7px auto;
     background-repeat: no-repeat;
-    background-position: right 3px;
+    background-position: right 8px;
     cursor: pointer;
 }
 .main_noti_btn:hover {
@@ -1363,6 +1363,7 @@ main {
     font-size: 1rem;
     color: #343a40;
     word-wrap: break-word;
+    white-space: pre-wrap;
 }
 
 .view_file {
@@ -1401,10 +1402,53 @@ main {
     font-size: 1rem;
     line-height: 1.5;
     border-radius: 0.3rem;
+    margin: 0 5px;
 }
 .view_btn a:hover {
     background: #2732c8;
 }
+
+.view_btn2{
+    margin-top: 5.055rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.view_btn2 a{
+    position: relative;
+    padding: 0.8rem 1.5rem;
+    border-color: transparent;
+    background: #868e96;
+    font-weight: 400;
+    color: #fff !important;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: 0.3rem;
+    margin: 0 5px;
+}
+
+.view_btn3{
+    margin-top: -3.055rem;
+    display: flex;
+    justify-content: center;
+}
+
+.view_btn3 a {
+    position: relative;
+    padding: 0.8rem 1.5rem;
+    border-color: transparent;
+    background: #111987;
+    font-weight: 400;
+    color: #fff !important;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: 0.3rem;
+    margin: 0 5px;
+}
+.view_btn a:hover {
+    background: #2732c8;
+}
+
 @media only screen and (max-width: 1190px) {
     html {
         font-size: 15px;
@@ -1442,6 +1486,11 @@ main {
     .sec4 {
         padding: 140px 0;
     }
+
+    .main_noti_btn {
+    background-position: right 6px;
+    }
+    
     .gall_img {
         width: 100%;
         overflow-x: scroll;
@@ -1860,6 +1909,10 @@ main {
 
     .pn li a {
         line-height: 30px;
+    }
+
+    .view_btn3 {
+    margin-top: 3.055rem;
     }
 
     /* 메인페이지 */
