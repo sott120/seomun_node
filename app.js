@@ -6,7 +6,12 @@ var expressLayouts = require('express-ejs-layouts');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var path = require('path');
+// const http = require('https');
 
+//헤로쿠 서버 꺼지지 않도록 하는 코드
+// setInterval(function(){
+//     http.get("https://seomun2022.herokuapp.com/");
+// },600000);
 
 const homes =require('./routes/route.js');
 app.use(expressLayouts);
