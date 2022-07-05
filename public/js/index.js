@@ -33,7 +33,7 @@ function kakaoLogout(){
         document.getElementById('login').style.display = 'block';
         document.getElementById('logout').style.display = 'none';
         document.getElementById('userLi').style.display = 'none';
-        alert(response.kakao_account.profile.nickname + '님 로그아웃 되었습니다.');
+        alert('로그아웃 되었습니다.');
       }
     })
     Kakao.Auth.setAccessToken(undefined);
