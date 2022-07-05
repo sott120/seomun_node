@@ -5,7 +5,7 @@ function kakaoLogin(){
   Kakao.Auth.login({
     success: function(response){
       Kakao.API.request({
-        url:'v2/user/me',
+        url:'/v2/user/me',
         success:function(response){
           console.log(response);
           // document.getElementById('user').innerText = 
