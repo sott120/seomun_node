@@ -27,6 +27,7 @@
             href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap"
             rel="stylesheet"
         />
+        <script src="https://developers.kakao.com/sdk/js/kakao.js"></script>
     </head>
 
     <body>
@@ -43,9 +44,12 @@
                         <li><a href="">입점신청</a></li>
                     </ul>
                 </nav>
-                <div class="login dis_none1000">
-                    <a href="login">로그인</a>
-                </div>
+                <ul class="login dis_none1000" style="color:#fff;">
+                    <li id="login" onclick="javasctipt:kakaoLogin();">카카오로그인</a>
+                    <!-- <a href="login">로그인</a> -->
+                    <li><span id="user"></span>님, 반갑습니다!</a>
+                    <li id="logout" onclick="javascript:kakaoLogout();">로그아웃</a>
+                </ul>
                 <div class="ham dis_block1000">
                     <span></span>
                     <span></span>
