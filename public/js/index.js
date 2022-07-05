@@ -23,7 +23,7 @@ function kakaoLogin(){
 };
 
 function kakaoLogout(){
-  if (!Kakao.Auth.getAccessToken()) {
+  if (Kakao.Auth.getAccessToken()) {
     Kakao.API.request({
       url:'/v1/user/unlink',
       success:function(response){
@@ -35,9 +35,6 @@ function kakaoLogout(){
         document.getElementById('userLi').style.display = 'none';
         alert('로그아웃 되었습니다.');
       }
-    })
-    Kakao.Auth.logout(function() {
-      alert('logout ok\naccess token -> ' + Kakao.Auth.getAccessToken())
     })
     Kakao.Auth.setAccessToken(undefined);
   }
