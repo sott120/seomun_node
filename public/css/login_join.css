@@ -81,6 +81,11 @@
     content: " |";
 }
 
+.kakaologin{
+    display: block;
+    margin: 0 auto 10px;
+}
+
 /* 회원가입 */
 .join_wrap {
     max-width: 480px;
