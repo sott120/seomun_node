@@ -24,20 +24,21 @@ function kakaoLogin(){
 
 function kakaoLogout(){
   if (!Kakao.Auth.getAccessToken()) {
-    
+    Kakao.API.request({
+      url:'/v1/user/unlink',
+      success:function(response){
+        // console.log(response);
+        // document.getElementById('user').innerText = 
+        // response.kakao_account.profile.nickname; //로그인 성공하면 유저이름 넣어주기
+        document.getElementById('login').style.display = 'block';
+        document.getElementById('logout').style.display = 'none';
+        document.getElementById('userLi').style.display = 'none';
+        alert('로그아웃 되었습니다.');
+      }
+    })
     Kakao.Auth.logout(function() {
-      Kakao.API.request({
-        url:'/v1/user/unlink',
-        success:function(response){
-          // console.log(response);
-          // document.getElementById('user').innerText = 
-          // response.kakao_account.profile.nickname; //로그인 성공하면 유저이름 넣어주기
-          document.getElementById('login').style.display = 'block';
-          document.getElementById('logout').style.display = 'none';
-          document.getElementById('userLi').style.display = 'none';
-          alert('로그아웃 되었습니다.');
-        }
-      })    })
+      alert('logout ok\naccess token -> ' + Kakao.Auth.getAccessToken())
+    })
     Kakao.Auth.setAccessToken(undefined);
   }
 };
