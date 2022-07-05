@@ -1,7 +1,9 @@
 Kakao.init('df117fdcfa786c5e28a5629fb8c82776');
 Kakao.isInitialized();
-// document.getElementById('logout').style.display = 'none';
-// document.getElementById('userLi').style.display = 'none';
+document.getElementById('logout').style.display = 'none';
+document.getElementById('userLi').style.display = 'none';
+
+console.log(Kakao.Auth);
 
 function kakaoLogin(){
   Kakao.Auth.login({
@@ -16,6 +18,7 @@ function kakaoLogin(){
           document.getElementById('userLi').style.display = 'block';
           document.getElementById('logout').style.display = 'block';
           alert(response.kakao_account.profile.nickname + '님 로그인 되었습니다.');
+          console.log(Kakao.Auth);
         }
       })
     }
