@@ -28,8 +28,8 @@ function kakaoLogout(){
       url:'/v1/user/unlink',
       success:function(response){
         // console.log(response);
-        document.getElementById('user').innerText = 
-        response.kakao_account.profile.nickname; //로그인 성공하면 유저이름 넣어주기
+        // document.getElementById('user').innerText = 
+        // response.kakao_account.profile.nickname; //로그인 성공하면 유저이름 넣어주기
         document.getElementById('login').style.display = 'block';
         document.getElementById('logout').style.display = 'none';
         document.getElementById('userLi').style.display = 'none';
