@@ -73,7 +73,7 @@ main {
 }
 
 .sub_active::after {
-    content: "";
+    content: '';
     position: absolute;
     left: 0;
     right: 0;
@@ -153,7 +153,7 @@ main {
 }
 
 .img2_bg::before {
-    content: "";
+    content: '';
     position: absolute;
     top: 0;
     left: 0;
@@ -242,7 +242,7 @@ main {
 }
 
 .sec3 h5::before {
-    content: "";
+    content: '';
     position: absolute;
     width: 30px;
     height: 2px;
@@ -302,7 +302,7 @@ main {
 }
 
 .sec4 .inner > div::after {
-    content: "";
+    content: '';
     position: absolute;
     top: 0;
     left: 0;
@@ -423,7 +423,7 @@ main {
 }
 
 .dropdown_toggle::after {
-    content: "";
+    content: '';
     display: inline-block;
     width: 1rem;
     height: 1rem;
@@ -591,12 +591,32 @@ main {
 }
 
 .bnr_wrap {
+    position: relative;
     width: 100%;
     height: 100%;
-    background-image: url(../img/index/mainBnr_img2.jpg);
+}
+
+.main_img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.main_img.img1 {
+    background-image: url(../img/index/mainBnr_img2.jpg);
+}
+
+.main_img.img2 {
+    background-image: url(../img/index/mainBnr_img1.jpg);
+}
+
+.main_img.on {
+    opacity: 1;
 }
 
 .main_title {
@@ -625,7 +645,7 @@ main {
 .bnr_wrap::after {
     position: absolute;
     z-index: 2;
-    content: "";
+    content: '';
     bottom: 0;
     width: 100%;
     height: 100%;
@@ -642,13 +662,22 @@ main {
     position: absolute;
     bottom: 10px;
     left: 10%;
-    color: #111987;
+    color: #adb5bd;
     font-weight: 600;
     z-index: 3;
 }
 
-.slide_nav > span:nth-child(3) {
-    width: 50px;
+.slide_nav_num {
+    transition: color 0.5s ease-in-out;
+}
+
+.slide_nav_num.on {
+    color: #111987;
+}
+
+.slide_nav > span:nth-child(2) {
+    position: relative;
+    width: 100px;
     height: 3px;
     background-color: #adb5bd;
 }
@@ -661,10 +690,17 @@ main {
     padding-left: 10px;
 }
 
-.slide_nav_ac {
+.slide_nav_bar {
+    position: absolute;
     width: 50px;
     height: 3px;
+    left: 27px;
     background-color: #111987;
+    transition: width 0.5s ease-in-out;
+}
+
+.slide_nav_bar.on {
+    width: 102px;
 }
 
 .bnr_img {
@@ -746,7 +782,7 @@ main {
     transform: translate(0, -15px);
 }
 .main_card a::before {
-    content: "";
+    content: '';
     display: block;
     width: 100%;
     height: 100%;
@@ -791,8 +827,9 @@ main {
 }
 
 .main_notice {
+    position: relative;
     flex: 6;
-    margin-right: 10px;
+    margin-right: 60px;
 }
 
 .main_noti_nav {
@@ -803,7 +840,7 @@ main {
 }
 
 .main_noti_nav::after {
-    content: "";
+    content: '';
     display: block;
     position: absolute;
     bottom: 0;
@@ -814,6 +851,7 @@ main {
 }
 
 .main_noti_nav > li {
+    position: relative;
     width: 25%;
 }
 
@@ -827,18 +865,18 @@ main {
     line-height: 3rem;
 }
 
-.main_noti_active > a {
+.main_noti_tab.active > a {
     width: 100%;
     color: #111987;
 }
 
-.main_noti_active::after {
-    content: "";
+.main_noti_tab.active::after {
+    content: '';
     position: absolute;
     left: 0;
     right: 0;
     bottom: 2px;
-    width: 25%;
+    width: 100%;
     height: 4px;
     background-color: #111987;
 }
@@ -846,11 +884,13 @@ main {
 .main_noti_wrap {
     display: flex;
     flex-wrap: wrap;
+    position: absolute;
+    top: 148px;
 }
 
 .main_noti_wrap > div {
     width: 50%;
-    padding: 1.5rem 0;
+    padding: 2.5rem 0;
     box-sizing: border-box;
     display: flex;
     border-bottom: 1px solid #ced4da;
@@ -898,19 +938,21 @@ main {
 }
 
 .main_noti_btn {
-    float: right;
+    position: absolute;
+    top: 20px;
+    right: 0;
     font-size: 1rem;
-    font-weight: 600;
-    color: #111987;
+    font-weight: 400;
+    color: #adb5bd;
+    text-decoration: underline;
     background: none;
     border: none;
-    margin: 20px 0;
+    cursor: pointer;
     padding-right: 15px;
-    background-image: url(../img/index/arrow04_r.png);
-    background-size: 7px auto;
+    background-image: url(../img/index/arrow04_r2.png);
+    background-size: 8px auto;
     background-repeat: no-repeat;
     background-position: right 8px;
-    cursor: pointer;
 }
 .main_noti_btn:hover {
     text-decoration: underline;
@@ -927,7 +969,7 @@ main {
 }
 
 .main_time > div::before {
-    content: "";
+    content: '';
     position: absolute;
     bottom: -10px;
     right: -10px;
@@ -1084,27 +1126,24 @@ main {
     box-sizing: border-box;
     display: flex;
     align-items: center;
-    transition: 1s ease-in-out;
 }
 
-.sns_view a{
+.sns_view a {
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    
 }
 
-
-.sns_view img{
+.sns_view img {
     width: 100px;
     height: auto;
-    opacity: .3;
-    transition: 0.2s ease-in-out;
+    opacity: 0.3;
+    transition: opacity 0.2s ease-in-out;
 }
 
-.sns_view a:hover img{
-    opacity: .8;
+.sns_view a:hover img {
+    opacity: 0.8;
 }
 
 .sns_view p {
@@ -1113,10 +1152,10 @@ main {
     font-size: 1.12rem;
     font-weight: 600;
     text-align: right;
-    transition: 0.2s ease-in-out;
+    transition: transform 0.2s ease-in-out;
 }
 
-.sns_view span{
+.sns_view span {
     color: #343a40;
 }
 .yout a:hover p {
@@ -1133,7 +1172,6 @@ main {
     transform: translateX(10px);
     color: #3b5998;
 }
-
 
 /* 먹거리살거리 썸네일페이지 */
 
@@ -1408,13 +1446,13 @@ main {
     background: #2732c8;
 }
 
-.view_btn2{
+.view_btn2 {
     margin-top: 5.055rem;
     display: flex;
     justify-content: space-between;
 }
 
-.view_btn2 a{
+.view_btn2 a {
     position: relative;
     padding: 0.8rem 1.5rem;
     border-color: transparent;
@@ -1427,7 +1465,7 @@ main {
     margin: 0 5px;
 }
 
-.view_btn3{
+.view_btn3 {
     margin-top: -3.055rem;
     display: flex;
     justify-content: center;
@@ -1488,9 +1526,17 @@ main {
     }
 
     .main_noti_btn {
-    background-position: right 6px;
+        background-position: right 6px;
+        top: 25px;
     }
-    
+
+    .under {
+        position: relative;
+        width: 100%;
+        height: 316.38px;
+        background-color: #fff;
+    }
+
     .gall_img {
         width: 100%;
         overflow-x: scroll;
@@ -1526,6 +1572,10 @@ main {
 
     .dis_none1000 {
         display: none;
+    }
+
+    .main_notice {
+        margin-right: 0;
     }
 
     .nav_bg {
@@ -1701,6 +1751,10 @@ main {
         display: block;
     }
 
+    .under {
+        height: 302.38px;
+    }
+
     .card_bnr article h2 {
         text-align: center;
     }
@@ -1714,6 +1768,14 @@ main {
         margin-top: 120px;
     }
 
+    .main_noti_btn {
+        background-position: right 5px;
+        top: 25px;
+        font-size: 0.8rem;
+        padding-right: 12px;
+        background-size: 6px auto;
+    }
+
     .main_noti_btn:hover {
         text-decoration: none;
     }
@@ -1722,14 +1784,14 @@ main {
         background-size: 1626px auto;
     }
 
-    .sns_view > div{
+    .sns_view > div {
         align-items: flex-end;
     }
 
-    .sns_view img{
+    .sns_view img {
         width: 90px;
     }
-    .sns_view span{
+    .sns_view span {
         display: block;
     }
 
@@ -1912,7 +1974,7 @@ main {
     }
 
     .view_btn3 {
-    margin-top: 3.055rem;
+        margin-top: 3.055rem;
     }
 
     /* 메인페이지 */
@@ -1924,8 +1986,11 @@ main {
         padding-bottom: 2rem;
     }
 
+    .under {
+        height: 413.38px;
+    }
+
     .bnr_img {
-        
         flex-direction: column;
     }
 
@@ -1959,6 +2024,7 @@ main {
 
     .main_noti_wrap > div {
         width: 100%;
+        padding: 1rem 0;
     }
 
     .main_noti_cont {
@@ -1973,7 +2039,7 @@ main {
     .gall_img {
         top: 58%;
     }
-    .gray_sec{
+    .gray_sec {
         padding: 20px 0 80px;
     }
     .yt {
@@ -1987,7 +2053,7 @@ main {
         text-decoration: none;
     }
 
-    .icon_cate{
+    .icon_cate {
         padding: 60px 0;
     }
     /* 먹거리살거리 썸네일페이지 */

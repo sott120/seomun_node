@@ -1,15 +1,17 @@
         <section class="main_bnr">
             <div class="bnr_wrap" id="mainBnr">
+                <div class="main_img img1 on"></div>
+                <div class="main_img img2"></div>
                 <div class="main_title">
                     <p>서문시장야시장과 함께라면 <span>대구의 밤은 곧 파티다!<span></span></p>
                     <h2>서문시장 야시장</h2>
                 </div>
             </div>
             <div class="slide_nav dis_none1000">
-                <span>01</span>
-                <span class="slide_nav_ac"></span>
+                <span class="slide_nav_num on">01</span>
                 <span></span>
-                <span>02</span>
+                <span class="slide_nav_bar"></span>
+                <span class="slide_nav_num">02</span>
             </div>
         </section>
         <section class="inner bnr_img">
@@ -74,15 +76,15 @@
             <article class="inner seperate">
                 <div class="main_notice">
                     <h2>참여마당</h2>
+                    <button class="main_noti_btn" onclick="location.href='notice';">MORE</button>
                     <ul class="main_noti_nav">
-                        <li class="main_noti_active">
-                            <a href="">공지사항</a>
-                        </li>
-                        <li><a href="">행사안내</a></li>
-                        <li><a href="">현장스케치</a></li>
-                        <li><a href="">언론보도</a></li>
+                        <li class="main_noti_tab active" onclick="openTab(event,'notice')"><a href="#none">공지사항</a></li>
+                        <li class="main_noti_tab" onclick="openTab(event,'event')"><a href="#none">행사안내</a></li>
+                        <li class="main_noti_tab" onclick="openTab(event,'sketch')"><a href="#none">현장스케치</a></li>
+                        <li class="main_noti_tab" onclick="openTab(event,'news')"><a href="#none">언론보도</a></li>
                     </ul>
-                    <div class="main_noti_wrap">
+                    <div class="under"></div>
+                    <div id="notice" class="main_noti_wrap">
                         <div>
                             <div class="main_noti_date">
                                 <span>18</span>
@@ -137,7 +139,158 @@
                             </div>
                         </div>
                     </div>
-                    <button class="main_noti_btn" onclick="location.href='notice';">MORE</button>
+                    <div id="event" class="main_noti_wrap" style="display: none;">
+                        <div>
+                            <div class="main_noti_date">
+                                <span>14</span>
+                                <p>2022.07</p>
+                            </div>
+                            <div class="main_noti_cont">
+                                <span>[행사안내] 서문야시장 상설무대 공연안내 05월 07일</span>
+                                <p>
+                                    5월 7일 오늘의 일정 입니다.     
+                                </p>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="main_noti_date">
+                                <span>24</span>
+                                <p>2022.04</p>
+                            </div>
+                            <div class="main_noti_cont">
+                                <span>[행사안내] 서문야시장 상설무대 공연안내 04월 24일</span>
+                                <p>
+                                    4월 24일 오늘의 일정 입니다.
+                                </p>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="main_noti_date">
+                                <span>6</span>
+                                <p>2022.05</p>
+                            </div>
+                            <div class="main_noti_cont">
+                                <span>[행사안내] 서문야시장 상설무대 공연안내 05월 01일</span>
+                                <p>
+                                    5월 1일 일정 입니다.
+                                </p>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="main_noti_date">
+                                <span>06</span>
+                                <p>2022.05</p>
+                            </div>
+                            <div class="main_noti_cont">
+                                <span>[행사안내] 서문야시장 상설무대 공연안내 04월 30일</span>
+                                <p>
+                                    4월 30일 일정 입니다.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="sketch" class="main_noti_wrap" style="display: none;">
+                        <div>
+                            <div class="main_noti_date">
+                                <span>25</span>
+                                <p>2018.07</p>
+                            </div>
+                            <div class="main_noti_cont">
+                                <span>7월 웨스트댄서스나잇 'TG Session'</span>
+                                <p>
+                                </p>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="main_noti_date">
+                                <span>12</span>
+                                <p>2017.07</p>
+                            </div>
+                            <div class="main_noti_cont">
+                                <span>[스토리인대구]서문시장 웹툰</span>
+                                <p>
+                                    서문시장 홍보웹툰입니다.
+                                </p>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="main_noti_date">
+                                <span>02</span>
+                                <p>2018.04</p>
+                            </div>
+                            <div class="main_noti_cont">
+                                <span>2018 제 2회 서문가요제 3월 결선 현장 스케치</span>
+                                <p>
+                                    2018 제 2회 서문가요제 3월 결선 현장 스케치입니다. 
+                                </p>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="main_noti_date">
+                                <span>06</span>
+                                <p>2018.02</p>
+                            </div>
+                            <div class="main_noti_cont">
+                                <span>서문야시장 2월초 스케치 #2</span>
+                                <p>
+                                    봄방학과 더불어 겨울이 물러가는 계절인 2월.. 한파도 한풀 껶여가고 있는데요..2월초의 서문야시장을 들여다 볼까요?
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="main_noti_wrap" id="news" style="display: none;">
+                        <div>
+                            <div class="main_noti_date">
+                                <span>25</span>
+                                <p>2018.07</p>
+                            </div>
+                            <div class="main_noti_cont">
+                                <span>'서문시장 야시장'의 '친절의 신'에 선정된 특별한 매대들</span>
+                                <p>
+                                    국내 최대 규모의 야시장이며, 대구 여행을 책임질 1순위 관광지로 성장한
+                                    '서문시장 야시장'. 시민참여형 가요제, 프로레슬링, 스트리트댄스 경연대회 등 독특한 볼거리, 
+                                    즐길거리와 함께 약 70여개의 매대가 즐비하여 방문객들로 하여금 '서문야시장'만의 맛과 멋에 흠뻑 취할 수 있게 한다.
+                                </p>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="main_noti_date">
+                                <span>25</span>
+                                <p>2018.07</p>
+                            </div>
+                            <div class="main_noti_cont">
+                                <span>레슬링 대회까지…보고 즐기고 참여하는 서문야시장</span>
+                                <p>
+                                    대구의 밤 볼거리로 자리매김하고 있는 서문시장 야시장이 본격적인 밤쇼핑 시즌을 맞아 다양한 프로그램을 신설하는 등 관광객 유치에 박차를 가하고 있다. 
+                                    단순한 먹거리 골목에서 탈피해 보고 즐기고 참여할 수 있는 공간으로 탈바꿈시킨다는 방침이다.
+                                </p>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="main_noti_date">
+                                <span>25</span>
+                                <p>2018.07</p>
+                            </div>
+                            <div class="main_noti_cont">
+                                <span>대구명물 서문 야시장 먹거리 '안전'…식중독균 불검출</span>
+                                <p>
+                                    대구=연합뉴스) 류성무 기자 = 대구시 보건환경연구원은 대구 명물인 서문시장 야시장 판매대 조리식품에 대한 위생점검에서 식중독균이 검출되지 않아 안전하다고 10일 밝혔다.                                </p>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="main_noti_date">
+                                <span>26</span>
+                                <p>2018.02</p>
+                            </div>
+                            <div class="main_noti_cont">
+                                <span>나도 가수가 될 수 있다! '서문가요제'</span>
+                                <p>
+                                    대구시 민생경제과(과장 정기영)에서는 ‘서문시장 야시장’에서 지난 3월 10일부터 매주 토요일 오후 8시에 일반인(국민, 외국관광객 등) 참여 가요제인 ‘2018 제2회 서문가요제’가 개최되고 있다고 밝혔다.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    
                 </div>
                 <div class="main_time">
                     <h2>운영시간</h2>

@@ -1,35 +1,36 @@
-// function fadeOut(el){
-//     el.style.opacity = 1;
-  
-//     (function fade() {
-//       if ((el.style.opacity -= .1) < 0) {
-//         el.style.display = "none";
-//       } else {
-//         requestAnimationFrame(fade);
-//       }
-//     })();
-//   };
-  
-//   function fadeIn(el, display){
-//     el.style.opacity = 0;
-//     el.style.display = display || "block";
-  
-//     (function fade() {
-//       var val = parseFloat(el.style.opacity);
-//       if (!((val += .1) > 1)) {
-//         el.style.opacity = val;
-//         requestAnimationFrame(fade);
-//       }
-//     })();
-//   };
+//메인배너 페이드인아웃
+function mainBnrImg() {
+    const mainImg = document.querySelectorAll('.main_img');
+    const slideNN = document.querySelectorAll('.slide_nav_num');
+    const slideBar = document.querySelector('.slide_nav_bar');
+    setInterval(function () {
+        if (mainImg[0].classList.contains('on')) {
+            mainImg[0].classList.remove('on');
+            mainImg[1].classList.add('on');
+            slideNN[1].classList.add('on');
+            slideBar.classList.add('on');
+        } else {
+            mainImg[0].classList.add('on');
+            mainImg[1].classList.remove('on');
+            slideNN[1].classList.remove('on');
+            slideBar.classList.remove('on');
+        }
+    }, 5000);
+}
 
+mainBnrImg();
 
-// let count=1;
-// let imgchange=document.querySelector('#mainBnr')
-// // setInterval(() => console.log(new Date()), 2000);
-// setInterval(function mainBnr(){
-
-//     imgchange.style.backgroundImage= "url(../img/index/mainBnr_img"+ count +".jpg)"
-//     count++;
-//     if(count>=3){count=1}
-// },3000)
+//메인 공지사항 탭메뉴
+function openTab(evt, tabName) {
+    let i, tabContent, tabLinks;
+    tabContent = document.getElementsByClassName('main_noti_wrap');
+    for (i = 0; i < tabContent.length; i++) {
+        tabContent[i].style.display = 'none';
+    }
+    tabLinks = document.getElementsByClassName('main_noti_tab');
+    for (i = 0; i < tabLinks.length; i++) {
+        tabLinks[i].className = tabLinks[i].className.replace(' active', '');
+    }
+    document.getElementById(tabName).style.display = 'flex';
+    evt.currentTarget.className += ' active';
+}
