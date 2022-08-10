@@ -27,7 +27,7 @@ function kakaoLogout(){
     Kakao.API.request({
       url:'/v1/user/unlink',
       success:function(response){
-        document.getElementById('login').style.display = 'block';
+        document.getElementById('headlogin').style.display = 'block';
         document.getElementById('logout').style.display = 'none';
         document.getElementById('userLi').style.display = 'none';
         alert('로그아웃 되었습니다.');
