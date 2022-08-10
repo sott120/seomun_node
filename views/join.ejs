@@ -13,102 +13,51 @@
             <div class="order-md-1">
                 <form>
                     <div class="btn-group seller_choice">
-                        <label class="btn-lg btn-secondary me-2">
-                            <input
-                                type="radio"
-                                name="options"
-                                id="food_seller"
-                                value="1"
-                                autocomplete="off"
-                                onclick="div_OnOff(this.value,'food_seller_info');"
-                            />
+                        <label class="btn-lg btn-secondary me-2" for="food_seller">
+                            <input type="radio" name="options" id="food_seller" value="1"
+                                onclick="div_OnOff(this.value,'food_seller_info');" />
                             식품셀러
                         </label>
-                        <label class="btn-lg btn-secondary">
-                            <input
-                                type="radio"
-                                name="options"
-                                id="flea_seller"
-                                value="2"
-                                autocomplete="off"
-                                onclick="div_OnOff(this.value,'flea_seller_info');"
-                            />
+                        <label class="btn-lg btn-secondary" for="flea_seller">
+                            <input type="radio" name="options" id="flea_seller" value="2"
+                                onclick="div_OnOff(this.value,'flea_seller_info');" />
                             플리마켓셀러
                         </label>
                     </div>
                     <hr class="mb-4" />
                     <h4>회원 공통정보</h4>
                     <div class="id_pw">
-                        <label class="mb-1">아이디</label>
-                        <input
-                            type="text"
-                            class="form-control mb-3"
-                            id="id"
-                            placeholder="5~20자의 영문과 숫자"
-                        />
+                        <label class="mb-1" for="id">아이디</label>
+                        <input type="text" class="form-control mb-3" id="id" placeholder="5~20자의 영문과 숫자" />
 
-                        <label class="mb-1">비밀번호</label>
-                        <input
-                            type="text"
-                            class="form-control mb-3"
-                            id="password"
-                            placeholder="5~20자의 영문과 숫자"
-                        />
+                        <label class="mb-1" for="password">비밀번호</label>
+                        <input type="text" class="form-control mb-3" id="password" placeholder="5~20자의 영문과 숫자" />
 
-                        <label class="mb-1">비밀번호 확인</label>
-                        <input
-                            type="text"
-                            class="form-control mb-3"
-                            id="password"
-                            placeholder="비밀번호를 다시 입력해주세요"
-                        />
+                        <label class="mb-1" for="passwordchk">비밀번호 확인</label>
+                        <input type="text" class="form-control mb-3" id="passwordchk" placeholder="비밀번호를 다시 입력해주세요" />
                     </div>
                     <hr class="mb-4" />
                     <div class="human_info">
-                        <label class="mb-1">이름</label>
-                        <input type="text" class="form-control mb-3" id="id" />
+                        <label class="mb-1" for="name">이름</label>
+                        <input type="text" class="form-control mb-3" id="name" />
 
-                        <label class="mb-1">성별</label><br />
+                        <label class="mb-1" for="woman">성별</label><br />
                         <div class="form-check form-check-inline">
-                            <input
-                                class="form-check-input"
-                                type="radio"
-                                name="gender"
-                                id="gender"
-                                value="woman"
-                            />
-                            <label class="form-check-label" for="inlineRadio1"
-                                >여자</label
-                            >
+                            <input class="form-check-input" type="radio" name="gender" id="woman" value="woman" />
+                            <div class="form-check-label" for="woman">여자</div>
                         </div>
                         <div class="form-check form-check-inline">
-                            <input
-                                class="form-check-input"
-                                type="radio"
-                                name="gender"
-                                id="gender"
-                                value="man"
-                            />
-                            <label class="form-check-label" for="inlineRadio2"
-                                >남자</label
-                            >
+                            <input class="form-check-input" type="radio" name="gender" id="man" value="man" />
+                            <div class="form-check-label" for="man">남자</div>
                         </div>
                         <div class="form-group mt-3">
-                            <label class="mb-1">생년월일</label>
+                            <label class="mb-1" for="birth_year">생년월일</label>
                             <div class="form-row">
                                 <div class="form-group col-md-4">
-                                    <input
-                                        type="text"
-                                        class="form-control"
-                                        id="birth_year"
-                                        placeholder="년(4자)"
-                                    />
+                                    <input type="text" class="form-control" id="birth_year" placeholder="년(4자)" />
                                 </div>
                                 <div class="form-group col-md-4">
-                                    <select
-                                        id="birth_month"
-                                        class="form-control"
-                                    >
+                                    <select id="birth_month" class="form-control">
                                         <option selected>월</option>
                                         <option>1</option>
                                         <option>2</option>
@@ -125,61 +74,34 @@
                                     </select>
                                 </div>
                                 <div class="form-group col-md-4">
-                                    <input
-                                        type="text"
-                                        class="form-control"
-                                        id="birth_day"
-                                        placeholder="일"
-                                    />
+                                    <input type="text" class="form-control" id="birth_day" placeholder="일" />
                                 </div>
                             </div>
                         </div>
                     </div>
                     <hr class="mb-4" />
                     <div class="call_info">
-                        <label class="mb-1">전화번호</label>
-                        <input
-                            type="text"
-                            class="form-control mb-3"
-                            id="phone"
-                            placeholder="숫자만 기입해주세요"
-                        />
+                        <label class="mb-1" for="phone">전화번호</label>
+                        <input type="text" class="form-control mb-3" id="phone" placeholder="숫자만 기입해주세요" />
 
-                        <label class="mb-1">이메일</label>
-                        <input
-                            type="text"
-                            class="form-control mb-3"
-                            id="email"
-                            placeholder="example@naver.com"
-                        />
+                        <label class="mb-1" for="email">이메일</label>
+                        <input type="text" class="form-control mb-3" id="email" placeholder="example@naver.com" />
                     </div>
 
                     <div id="food_seller_info" class="food_seller_info">
                         <hr class="mb-4" />
                         <h4>식품셀러 추가정보</h4>
-                        <label class="mb-1">상호명</label>
-                        <input
-                            type="text"
-                            class="form-control mb-3"
-                            id="store_name"
-                        />
+                        <label class="mb-1" for="store_name">상호명</label>
+                        <input type="text" class="form-control mb-3" id="store_name" />
 
-                        <label class="mb-1">주메뉴</label>
-                        <input
-                            type="text"
-                            class="form-control mb-3"
-                            id="food_name"
-                        />
+                        <label class="mb-1" for="food_name">주메뉴</label>
+                        <input type="text" class="form-control mb-3" id="food_name" />
 
-                        <label class="mb-1">보조메뉴</label>
-                        <input
-                            type="text"
-                            class="form-control mb-3"
-                            id="sbfood_name"
-                        />
+                        <label class="mb-1" for="sbfood_name">보조메뉴</label>
+                        <input type="text" class="form-control mb-3" id="sbfood_name" />
 
-                        <label class="mb-1">식품분류코드</label>
-                        <select id="birth_month" class="form-control">
+                        <label class="mb-1" for="foodCode">식품분류코드</label>
+                        <select id="foodCode" class="form-control">
                             <option selected>선택해주세요</option>
                             <option>100-스테이크</option>
                             <option>101-소고기류</option>
@@ -207,24 +129,13 @@
                     <div id="flea_seller_info" class="flea_seller_info">
                         <hr class="mb-4" />
                         <h4>플리마켓셀러 추가정보</h4>
-                        <label class="mb-1">매대명</label>
-                        <input
-                            type="text"
-                            class="form-control mb-3"
-                            id="flea_name"
-                        />
+                        <label class="mb-1" for="flea_name">매대명</label>
+                        <input type="text" class="form-control mb-3" id="flea_name" />
 
-                        <label class="mb-1">판매제품 종류</label>
-                        <input
-                            type="text"
-                            class="form-control mb-3"
-                            id="product"
-                        />
+                        <label class="mb-1" for="product">판매제품 종류</label>
+                        <input type="text" class="form-control mb-3" id="product" />
                     </div>
-                    <button
-                        class="w-100 btn btn-lg btn_main mt-5 mb-5"
-                        type="submit"
-                    >
+                    <button class="w-100 btn btn-lg btn_main mt-5 mb-5" type="submit">
                         회원가입
                     </button>
                 </form>
